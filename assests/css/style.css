@@ -1,7 +1,169 @@
 /* Reset CSS */
 
 * {
-    padding: 0;
-    margin: 0;
+    padding   : 0;
+    margin    : 0;
     box-sizing: border-box;
 }
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 1. Possiton
+   2. Size (width, heigth)
+   3. Color
+   4. Style 
+*/
+
+#main {}
+
+#header {
+    height          : 46px;
+    background-color: black;
+    text-align      : center;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    z-index         : 1;
+}
+
+
+#nav {
+    display: inline-block;
+}
+
+#nav,
+.subNav {
+    list-style: none;
+    min-width : 160px;
+}
+
+#nav li {
+    display : inline-block;
+    position: relative;
+}
+
+#nav>li>a {
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height    : 46px;
+    padding        : 0 24px;
+    display        : block;
+    color          : #fff;
+}
+
+#nav .subNav {
+    display         : none;
+    position        : absolute;
+    background-color: #fff;
+    color           : #000;
+    text-align      : left;
+    box-shadow      : 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subNav li {
+    display: block;
+}
+
+#nav .subNav a {
+    color      : #000;
+    line-height: 38px;
+    padding    : 0 20px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+#header .search-btn {
+    float  : right;
+    padding: 0 21px;
+    cursor : p;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+}
+
+#header .search-icon {
+    color      : #fff;
+    font-size  : 20px;
+    line-height: 46px;
+}
+
+#nav li:hover .subNav {
+    display: block;
+}
+
+#nav .subNav li:hover a,
+#nav>li:hover>a {
+    color           : #000;
+    background-color: #ccc;
+    width           : 100%;
+}
+
+#slider {
+    background-color: #fff;
+    margin-top      : 46px;
+    padding-top     : 50%;
+    background      : url('/assests/img/slider/slider.jpg') top center /cover no-repeat;
+    position        : relative;
+}
+
+
+#slider .text-content {
+    position  : absolute;
+    bottom    : 47px;
+    left      : 50%;
+    transform : translateX(-50%);
+    text-align: center;
+    color     : #fff;
+}
+
+#slider .heading {
+    font-weight: 500px;
+    font-size  : 24px;
+}
+
+#slider .text-description {
+    font-size : 15px;
+    margin-top: 25px;
+}
+
+
+#content {}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#footer {}
